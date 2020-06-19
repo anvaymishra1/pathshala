@@ -2,8 +2,8 @@ import Layout from '../components/layout'
 
 export default function Host() {
   return (
-    <Layout>
-      <h1>This is Host Page</h1>
+    <Layout title="Host">
+      <h1>Host Page</h1>
     </Layout>
   )
 }
