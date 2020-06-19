@@ -55,6 +55,7 @@ class JoinForm extends Component {
                 required
               />{' '}
             </label>
+            <br />
             <label htmlFor="classCode">
               Enter Class Code
               <br />

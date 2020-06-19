@@ -50,6 +50,7 @@ class HostForm extends Component {
               required
             />{' '}
           </label>
+          <br />
           <label htmlFor="classCode">
             Your Class Code
             <br />
