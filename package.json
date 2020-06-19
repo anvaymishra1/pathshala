@@ -1,0 +1,25 @@
+{
+  "name": "pathshala",
+  "version": "0.1.0",
+  "description": "A better way to take classes, remotely",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/nullayak/pathshala/raw/master/LICENSE"
+    }
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "next": "9.4.4",
+    "node-sass": "^4.14.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-fade-in": "^1.1.0",
+    "socket.io": "^2.3.0"
+  }
+}
