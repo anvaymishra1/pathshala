@@ -1,9 +1,11 @@
 import Layout from '../components/layout'
-
+import Form from '../components/Form'
+import React from 'react'
 export default function Join() {
   return (
-    <Layout>
-      <h1>This is Join Page</h1>
+    <Layout title="Join">
+      <h1>Join Page</h1>
+        <Form></Form>
     </Layout>
   )
 }

@@ -1,9 +1,12 @@
 import Layout from '../components/layout'
+import Form from '../components/Form'
+
 
 export default function Host() {
   return (
-    <Layout>
-      <h1>This is Host Page</h1>
+    <Layout title="Host">
+      <h1>Host Page</h1>
+        <Form></Form>
     </Layout>
   )
 }
