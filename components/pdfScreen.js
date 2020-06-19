@@ -1,10 +1,10 @@
 import React from 'react'
-import styles from './screen.module.scss'
-import ParticipantCard from './participantcard'
+import styles from './pdfScreen.module.scss'
+import ParticipantCard from './participantCard'
 
 // TODO: Add Mouse Pointer
 
-function PdfScreen() {
+function PDFScreen() {
   return (
     <>
       <div className={styles.left} id="screen">
@@ -37,4 +37,4 @@ function PdfScreen() {
   )
 }
 
-export default PdfScreen
+export default PDFScreen

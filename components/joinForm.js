@@ -43,25 +43,30 @@ class JoinForm extends Component {
       <div className={styles.form}>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label>Enter your Name</label>
-            <br />
-            <input
-              type="text"
-              value={this.state.name}
-              placeholder="Name"
-              onChange={this.handleNameChange}
-              required
-            />{' '}
-            <br />
-            <label>Enter Class Code</label>
-            <br />
-            <input
-              type="text"
-              value={this.state.code}
-              placeholder="Code"
-              onChange={this.handleCodeChange}
-              required
-            />{' '}
+            <label htmlFor="name">
+              Enter your Name
+              <br />
+              <input
+                type="text"
+                id="name"
+                value={this.state.name}
+                placeholder="Name"
+                onChange={this.handleNameChange}
+                required
+              />{' '}
+            </label>
+            <label htmlFor="classCode">
+              Enter Class Code
+              <br />
+              <input
+                type="text"
+                id="classCode"
+                value={this.state.code}
+                placeholder="Code"
+                onChange={this.handleCodeChange}
+                required
+              />{' '}
+            </label>
           </div>
           <button type="submit">Join</button>
         </form>

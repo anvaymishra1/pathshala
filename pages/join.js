@@ -3,7 +3,7 @@ import Layout from '../layouts/layout'
 import HomeLayout from '../layouts/homeLayout'
 import JoinForm from '../components/joinForm'
 import Heading from '../components/heading'
-import Pdfscreen from '../components/PdfScreen'
+import PDFScreen from '../components/pdfScreen'
 
 class Join extends Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class Join extends Component {
               <JoinForm onFormSubmit={this.formSubmit} />
             </HomeLayout>
           )}
-          {showPDF && <Pdfscreen />}
+          {showPDF && <PDFScreen />}
         </Layout>
       </>
     )

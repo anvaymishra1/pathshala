@@ -38,19 +38,24 @@ class HostForm extends Component {
     return (
       <div className={styles.form}>
         <form onSubmit={this.handleSubmit}>
-          <label>Enter Class Name</label>
-          <br />
-          <input
-            type="text"
-            value={this.state.class}
-            placeholder="Class Name"
-            onChange={this.handleClassChange}
-            required
-          />{' '}
-          <br />
-          <label>Your Class Code</label>
-          <br />
-          <input type="text" value={this.state.code} readOnly /> <button type="submit">Host</button>
+          <label htmlFor="className">
+            Enter Class Name
+            <br />
+            <input
+              type="text"
+              id="className"
+              value={this.state.class}
+              placeholder="Class Name"
+              onChange={this.handleClassChange}
+              required
+            />{' '}
+          </label>
+          <label htmlFor="classCode">
+            Your Class Code
+            <br />
+            <input type="text" id="classCode" value={this.state.code} readOnly />{' '}
+            <button type="submit">Host</button>
+          </label>
         </form>
       </div>
     )

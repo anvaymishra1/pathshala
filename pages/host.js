@@ -3,7 +3,7 @@ import Layout from '../layouts/layout'
 import HomeLayout from '../layouts/homeLayout'
 import HostForm from '../components/hostForm'
 import Heading from '../components/heading'
-import Pdfscreen from '../components/PdfScreen'
+import PDFScreen from '../components/pdfScreen'
 
 class Host extends Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class Host extends Component {
               <HostForm onFormSubmit={this.formSubmit} />
             </HomeLayout>
           )}
-          {showPDF && <Pdfscreen />}
+          {showPDF && <PDFScreen />}
         </Layout>
       </>
     )
