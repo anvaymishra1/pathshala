@@ -1,5 +1,6 @@
 import Layout from '../components/layout'
 import Heading from '../components/heading'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -10,13 +11,17 @@ export default function Home() {
       />
 
       <div className="grid">
-        <a href="/host" className="card">
-          <h1 align="center">Host</h1>
-        </a>
+        <Link href="/host">
+          <a className="card">
+            <h1 align="center">Host</h1>
+          </a>
+        </Link>
 
-        <a href="/join" className="card">
-          <h1 align="center">Join</h1>
-        </a>
+        <Link href="/join">
+          <a className="card">
+            <h1 align="center">Join</h1>
+          </a>
+        </Link>
       </div>
       <style jsx>{`
         .grid {
