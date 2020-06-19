@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import Router from 'next/router'
 import styles from './form.module.scss'
 
-export class Form extends Component {
+class JoinForm extends Component {
   constructor(props) {
     super(props)
 
@@ -29,9 +28,10 @@ export class Form extends Component {
   // redirect = ()=>{
   //   this.props.history.push('/classPage');
   // }
+
   handleSubmit = event => {
     if (this.state.codeMatched) {
-      Router.push('/classPage')
+      this.props.onFormSubmit()
     } else {
       alert('There is no meeting with the entered code')
     }
@@ -43,30 +43,31 @@ export class Form extends Component {
       <div className={styles.form}>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label>Enter your Name </label>
+            <label>Enter your Name</label>
             <br />
             <input
               type="text"
               value={this.state.name}
               placeholder="Name"
               onChange={this.handleNameChange}
+              required
             />{' '}
             <br />
             <label>Enter Class Code</label>
             <br />
             <input
-              type="password"
+              type="text"
               value={this.state.code}
               placeholder="Code"
               onChange={this.handleCodeChange}
+              required
             />{' '}
           </div>
-
-          <button type="submit">Submit</button>
+          <button type="submit">Join</button>
         </form>
       </div>
     )
   }
 }
 
-export default Form
+export default JoinForm

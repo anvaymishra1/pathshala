@@ -1,3 +1,4 @@
+import React from 'react'
 import '../styles/styles.global.scss'
 
 // This default export is required in a new `pages/_app.js` file.

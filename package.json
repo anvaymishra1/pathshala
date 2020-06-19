@@ -12,8 +12,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ./components/** ./styles/** ./pages/** --ext js,jsx",
-    "lint:fix": "eslint ./components/** ./styles/** ./pages/** --ext js,jsx --fix"
+    "lint": "eslint ./components/** ./layouts/** ./styles/** ./pages/** --ext js,jsx",
+    "lint:fix": "eslint ./components/** ./layouts/** ./styles/** ./pages/** --ext js,jsx --fix"
   },
   "dependencies": {
     "@zeit/next-sass": "1.0.1",
