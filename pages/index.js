@@ -1,7 +1,7 @@
 import Layout from '../components/layout'
 import Heading from '../components/heading'
 import Link from 'next/link'
-
+// Landing Page
 export default function Home() {
   return (
     <Layout>
