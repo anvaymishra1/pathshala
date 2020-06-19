@@ -1,9 +1,7 @@
 import PdfScreen from '../components/PdfScreen'
 
 function classPage() {
-  return (
-      <PdfScreen />
-  )
+  return <PdfScreen />
 }
 
 export default classPage

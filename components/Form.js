@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import styles from './form.module.scss'
 import Router from 'next/router'
+import styles from './form.module.scss'
 
 export class Form extends Component {
   constructor(props) {
@@ -19,11 +19,13 @@ export class Form extends Component {
       code: event.target.value,
     })
   }
+
   handleNameChange = event => {
     this.setState({
       name: event.target.value,
     })
   }
+
   // redirect = ()=>{
   //   this.props.history.push('/classPage');
   // }
@@ -35,6 +37,7 @@ export class Form extends Component {
     }
     event.preventDefault()
   }
+
   render() {
     return (
       <div className={styles.form}>
@@ -47,8 +50,8 @@ export class Form extends Component {
               value={this.state.name}
               placeholder="Name"
               onChange={this.handleNameChange}
-            ></input>{' '}
-            <br></br>
+            />{' '}
+            <br />
             <label>Enter Class Code</label>
             <br />
             <input
@@ -56,7 +59,7 @@ export class Form extends Component {
               value={this.state.code}
               placeholder="Code"
               onChange={this.handleCodeChange}
-            ></input>{' '}
+            />{' '}
           </div>
 
           <button type="submit">Submit</button>
