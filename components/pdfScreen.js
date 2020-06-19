@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './pdfScreen.module.scss'
 import ParticipantCard from './participantCard'
 
-// TODO: Add Mouse Pointer
+// @todo Add Mouse Pointer
 
 function PDFScreen() {
   return (
