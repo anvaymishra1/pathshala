@@ -2,6 +2,7 @@
 import React from 'react'
 import styles from './pdfScreen.module.scss'
 import ParticipantCard from './participantCard'
+import useMousePosition from './mousePosition'
 
 import back from '../util/back'
 
@@ -17,9 +18,24 @@ function PDFScreen() {
       })
       .catch(err => console.log(err))
   }
+  const { x, y } = useMousePosition()
+  const hasMovedCursor = typeof x === 'number' && typeof y === 'number'
+  const coordinates = { xval: x, yval: y }
   return (
     <>
       <div className={styles.left} id="screen">
+        {console.log(x, y)}
+        <div
+          style={{
+            background: 'lightblue',
+            borderRadius: '50%',
+            width: '20px',
+            height: '20px',
+            position: 'absolute',
+            left: x,
+            top: y,
+          }}
+        ></div>
         <h1>PDF Screen</h1>
         <button onClick={uploadHandler}>+</button>
       </div>
