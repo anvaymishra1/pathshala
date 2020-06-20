@@ -60,7 +60,7 @@ class JoinForm extends Component {
               Enter Class Code
               <br />
               <input
-                type="text"
+                type="password"
                 id="classCode"
                 value={this.state.code}
                 placeholder="Code"
