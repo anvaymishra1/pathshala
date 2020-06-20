@@ -6,10 +6,6 @@ import useMousePosition from './mousePosition'
 import back from '../util/back'
 
 function PdfScreen() {
-  const { x, y } = useMousePosition()
-  const hasMovedCursor = typeof x === 'number' && typeof y === 'number'
-  const coordinates = { xval: x, yval: y }
-
   const uploadHandler = async () => {
     // eslint-disable-next-line no-return-await
     return await back
