@@ -1,13 +1,27 @@
 import React from 'react'
-import styles from './pdfScreen.module.scss'
-import ParticipantCard from './participantCard'
+import styles from './screen.module.scss'
+import ParticipantCard from './participantcard'
+import useMousePosition from './mousePosition'
 
-// @todo Add Mouse Pointer
-
-function PDFScreen() {
+function PdfScreen() {
+  const { x, y } = useMousePosition()
+  const hasMovedCursor = typeof x === 'number' && typeof y === 'number'
+  const coordinates = { xval: x, yval: y }
   return (
-    <>
+    <section className={styles.container}>
       <div className={styles.left} id="screen">
+        {console.log(coordinates)}
+        <div
+          style={{
+            background: 'lightblue',
+            borderRadius: '50%',
+            width: '20px',
+            height: '20px',
+            position: 'absolute',
+            left: x,
+            top: y,
+          }}
+        ></div>
         <h1>PDF Screen</h1>
       </div>
       <div className={styles.right}>
@@ -33,8 +47,8 @@ function PDFScreen() {
         <ParticipantCard props="Participant 1" />
         <ParticipantCard props="Participant 1" />
       </div>
-    </>
+    </section>
   )
 }
 
-export default PDFScreen
+export default PdfScreen

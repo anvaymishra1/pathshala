@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './participantCard.module.scss'
+import styles from './card.module.scss'
 
 function ParticipantCard({ props }) {
   return (
