@@ -5,21 +5,46 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/thepushkarp/pathshala/raw/master/LICENSE"
+      "url": "https://github.com/nullayak/pathshala/raw/master/LICENSE"
     }
   ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint ./components/** ./layouts/** ./styles/** ./pages/** --ext js,jsx",
+    "lint:fix": "eslint ./components/** ./layouts/** ./styles/** ./pages/** --ext js,jsx --fix"
   },
   "dependencies": {
-    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-sass": "1.0.1",
     "next": "9.4.4",
-    "node-sass": "^4.14.1",
+    "node-sass": "^4.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-fade-in": "^1.1.0",
-    "socket.io": "^2.3.0"
+    "react-fade-in": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "2.5.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.10",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,scss,json,md}": [
+      "pretty-quick --staged"
+    ]
   }
 }
