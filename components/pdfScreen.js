@@ -1,14 +1,15 @@
 /* eslint-disable no-console */
 import React from 'react'
-import styles from './pdfScreen.module.scss'
-import ParticipantCard from './participantCard'
+import styles from './screen.module.scss'
+import ParticipantCard from './participantcard'
 import useMousePosition from './mousePosition'
-
 import back from '../util/back'
 
-// @todo Add Mouse Pointer
+function PdfScreen() {
+  const { x, y } = useMousePosition()
+  const hasMovedCursor = typeof x === 'number' && typeof y === 'number'
+  const coordinates = { xval: x, yval: y }
 
-function PDFScreen() {
   const uploadHandler = async () => {
     // eslint-disable-next-line no-return-await
     return await back
@@ -22,9 +23,9 @@ function PDFScreen() {
   const hasMovedCursor = typeof x === 'number' && typeof y === 'number'
   const coordinates = { xval: x, yval: y }
   return (
-    <>
+    <section className={styles.container}>
       <div className={styles.left} id="screen">
-        {console.log(x, y)}
+        {console.log(coordinates)}
         <div
           style={{
             background: 'lightblue',
@@ -62,8 +63,8 @@ function PDFScreen() {
         <ParticipantCard props="Participant 1" />
         <ParticipantCard props="Participant 1" />
       </div>
-    </>
+    </section>
   )
 }
 
-export default PDFScreen
+export default PdfScreen
